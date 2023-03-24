@@ -1,12 +1,15 @@
 from django.contrib import admin
-from pagina.models import Profesore, Entregable, Estudiante, Curso
+from pagina.models import Cantante, Cancion, Album, Bandaa
 
 # Register your models here.
 
-admin.site.register(Curso)
 
-admin.site.register(Profesore)
+admin.site.register(Cantante)
+admin.site.register(Cancion)
+admin.site.register(Album)
+admin.site.register(Bandaa)
 
-admin.site.register(Entregable)
 
-admin.site.register(Estudiante)
+
+
+

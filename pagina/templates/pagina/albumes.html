@@ -3,7 +3,7 @@
 
 {% load static %}
 {% block title%}
-Cursos
+Albumes
 {% endblock%}
 
 {% block contenid_que_cambia %}
@@ -12,9 +12,9 @@ Cursos
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+                <img class="masthead-avatar mb-5"><img src="{% static 'pagina/assets/img/avataaars.svg' %}" alt="..." />
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Cursos</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">Albumes</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -22,8 +22,17 @@ Cursos
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+                <p class="masthead-subheading font-weight-light mb-0">CODERHOUSE</p>
             </div>
         </header>
-
-        {% endblock %}
+        
+        <h1>PAGINA DE ALMBUMES</h1>
+    
+        <form action=""    method="post">{% csrf_token %}
+            <p> Album: <input type = "text" name="album">
+            <p> Autor: <input type = "text" name="autor">
+            <p> Anio de lanzamiento: <input type = "number" name="lanzamiento">
+            <input type = "submit" value="Enviar">
+        </form>   
+    
+{% endblock %}

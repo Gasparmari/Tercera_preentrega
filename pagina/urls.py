@@ -2,9 +2,9 @@ from django.urls import path
 from pagina.views import *
 
 urlpatterns = [
-    path('', index, name = 'index'),
-    path('entregables/', entregables, name = 'Entregables'),
-    path('cursos/', cursos, name = 'Cursos'),
-    path('profesores/', profesores, name = 'Profesores'),
-    path('estudiantes/', estudiantes, name = 'Estudiantes')
+    path('', buscar_banda, name = 'buscar_bandas'),
+    path('bandas/', bandas, name = 'Bandas'),
+    path('canciones/', canciones, name = 'Canciones'),
+    path('albumes/', albumes, name = 'Albumes'),
+    path('cantantes/', cantantes, name = 'Cantantes'),
 ]

@@ -2,6 +2,9 @@
 {% extends 'pagina/base.html'%}
 
 {% load static %}
+{% block title%}
+Canciones
+{% endblock%}
 
 {% block contenid_que_cambia %}
 <!DOCTYPE html>
@@ -11,7 +14,7 @@
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5"><img src="{% static 'pagina/assets/img/avataaars.svg' %}" alt="..." />
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Proyecto</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">Canciones</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -22,4 +25,13 @@
                 <p class="masthead-subheading font-weight-light mb-0">CODERHOUSE</p>
             </div>
         </header>
-        {% endblock %}
+
+        <h1>PAGINA DE CANCIONES</h1>
+    
+        <form action=""    method="post">{% csrf_token %}
+            <p> Cancion: <input type = "text" name="cancion">
+            <p> Autor: <input type = "text" name="autor">
+            <input type = "submit" value="Enviar">
+        </form>   
+    
+{% endblock %}

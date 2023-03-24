@@ -24,17 +24,38 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'index' %}">Inicio</a>
-                <a class="navbar-brand" href="{% url 'Profesores' %}">Profesores</a>
-                <a class="navbar-brand" href="{% url 'Cursos' %}">Cursos</a>
-                <a class="navbar-brand" href="{% url 'Estudiantes' %}">Estudiantes</a>
-                <a class="navbar-brand" href="{% url 'Entregables' %}">Entregables</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
+                {% if pag == "buscar_bandas" %}
+                    <a class="navbar-brand --bs-pink bg-primary" href="{% url 'buscar_bandas' %}">Inicio</a>
+                {% else %}
+                    <a class="navbar-brand --bs-pink" href="{% url 'buscar_bandas' %}">Inicio</a>
+                {% endif %}
+
+                {% if pag == "bandas" %}
+                    <a class="navbar-brand --bs-pink bg-primary" href="{% url 'Bandas' %}">Bandas</a>
+                {% else %}
+                    <a class="navbar-brand --bs-pink" href="{% url 'Bandas' %}">Bandas</a>
+                {% endif %}
+
+                {% if pag == "Canciones" %}
+                    <a class="navbar-brand --bs-pink bg-primary" href="{% url 'Canciones' %}">Canciones</a>
+                {% else %}
+                    <a class="navbar-brand --bs-pink" href="{% url 'Canciones' %}">Canciones</a>
+                {% endif %}
+                
+                {% if pag == "albumes" %}
+                    <a class="navbar-brand --bs-pink bg-primary" href="{% url 'Albumes' %}">Albumes</a>
+                {% else %}
+                    <a class="navbar-brand --bs-pink" href="{% url 'Albumes' %}">Albumes</a>
+                {% endif %}
+
+                {% if pag == "Cantantes" %}
+                    <a class="navbar-brand --bs-pink bg-primary" href="{% url 'Cantantes' %}">Cantantes</a>
+                {% else %}
+                    <a class="navbar-brand --bs-blue" href="{% url 'Cantantes' %}">Cantantes</a>
+                {% endif %}
+                <a class="btn btn-primary" href="#signup">Sign Up</a>
             </div>
         </nav>
 
@@ -44,32 +65,6 @@
         <footer class="footer text-center">
             <div class="container">
                 <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            2215 John Daniel Drive
-                            <br />
-                            Clark, MO 65243
-                        </p>
-                    </div>
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
-                    </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
-                        </p>
-                    </div>
                 </div>
             </div>
         </footer>
